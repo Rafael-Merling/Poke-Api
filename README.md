@@ -1,12 +1,26 @@
+# Project's Objective
 
-- [X] Generalizar parser (Parcial)
-- [X] 1 folder para cada endpoint
-- [X] Utilizar black-py
-- [X] Colocar codigo em um container
-
-
-- [X] Trocar as credenciais do git para os da Erathos
-- [X] Dar uma estudada nos códigos do extractor e do package
-- [X] Conferir o fluxo de funcionamento de algumas apis já implementadas
+This a simple project created with the objective to learn how a ETL project works, since the information fetch from a source (PokeApi)
+to loading the project on a target (MinIO). It used the help from pandas package wo it would be possible to use dataframes to help the data
+transformation and used a docker as a learning purpose as well
 
 
+### What was used
+- Python 3 programming language
+- Local Host MinIO
+
+### How to make this project work
+If you want to edit this project, you can clone this repository, and use the pip install on the packages that are inside de "requirements.txt" file
+
+If you want to just execute the project, you need to have the docker installed in your machine, and then use
+
+```
+docker build -t pokeapi -f docker/Dockerfile
+docker run -d pokeapi
+```
+
+Then you just need to execute the docker with a bash command, and then use the following command
+
+```
+python3 ./main.py
+```
